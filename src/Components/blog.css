@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0 0;
+  margin: 0 0;
+  box-sizing: border-box;
+  font-family: "spartan", sans-serif;
+}
+
+.blog .page {
+  margin: 6vh 0;
+  text-align: center;
+}
+.blog .page span {
+  border-radius: 7px;
+  background-color: rgb(18, 140, 39);
+  padding: 13px 16px;
+  font-size: 20px;
+  color: white;
+  min-width: 30px;
+  margin-right: 0.5vw;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.blog .page span .arrow {
+  top: 10px;
+  font-size: 30px;
+  transform: translateY(1.1vh);
+}
+.blog .page span:hover {
+  opacity: 0.65;
+}
+.blog .page .spec {
+  width: 40px;
+}
+.blog header {
+  background: url("./img//banner/b19.jpg");
+  background-size: cover;
+  height: 43vh;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding-top: 8vh;
+}
+.blog header h1 {
+  margin-bottom: 1.5vh;
+  letter-spacing: 2px;
+  font-size: 40px;
+}
+.blog main {
+  margin-top: 12vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.blog main div {
+  width: 83vw;
+  display: flex;
+  position: relative;
+  margin-top: 15.4vh;
+}
+.blog main div img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 3/2;
+  width: 37vw;
+  height: 50vh;
+  z-index: 1;
+}
+.blog main div span {
+  position: absolute;
+  color: grey;
+  top: -8.5vh;
+  font-size: 98px;
+  line-height: 84px;
+  font-weight: 700;
+}
+.blog main div section {
+  padding-top: 14vh;
+  padding-left: 8vw;
+}
+.blog main div section h2 {
+  margin-bottom: 2vh;
+  font-weight: 600;
+}
+.blog main div section .kickstarter {
+  color: grey;
+  font-size: 18px;
+  width: 33vw;
+  margin-bottom: 1.5vh;
+}
+.blog main div section .pin {
+  font-weight: 700;
+  margin-top: 2.2vh;
+  display: flex;
+}
+.blog main div section .pin hr {
+  width: 6vw;
+  margin-left: 1.3vw;
+  right: 13vw;
+  height: 0.1vh;
+  margin-top: 0.67vh;
+  top: 1vh;
+}
+.blog main div section .pin:hover {
+  color: rgb(30, 107, 30);
+  cursor: pointer;
+}
+.blog main div section .pin:hover hr {
+  color: rgb(30, 107, 30);
+  background-color: rgb(30, 107, 30);
+}
+
+@media screen and (max-width: 500px) {
+  .blog main {
+    margin-top: 4vh;
+  }
+  .blog main div {
+    flex-direction: column;
+  }
+  .blog main div img {
+    width: 83vw;
+  }
+  .blog main div section {
+    padding-top: 5.5vh;
+    padding-left: 0vw;
+  }
+  .blog main div section .kickstarter {
+    width: auto;
+  }
+  .blog main div section .pinP {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=blog.css.map */

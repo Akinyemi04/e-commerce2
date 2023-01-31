@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0 0;
+  margin: 0 0;
+  box-sizing: border-box;
+  font-family: "spartan", sans-serif;
+}
+
+.shop {
+  width: 100vw;
+}
+.shop p {
+  margin: 6vh 0;
+  text-align: center;
+}
+.shop p span {
+  border-radius: 7px;
+  background-color: rgb(18, 140, 39);
+  padding: 13px 16px;
+  font-size: 20px;
+  color: white;
+  min-width: 30px;
+  margin-right: 0.5vw;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.shop p span .arrow {
+  top: 10px;
+  font-size: 30px;
+  transform: translateY(1.1vh);
+}
+.shop p span:hover {
+  opacity: 0.65;
+}
+.shop p .spec {
+  width: 40px;
+}
+.shop header {
+  background: url("./img//banner/b1.jpg");
+  background-size: cover;
+  height: 40vh;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  color: white;
+  padding-top: 8vh;
+}
+.shop header h1 {
+  margin-bottom: 1.5vh;
+  font-size: 40px;
+}
+.shop .products {
+  background-color: white;
+  text-align: center;
+  display: block;
+  margin-top: 7vh;
+  margin-bottom: 7vh;
+}
+.shop .products h3 {
+  font-weight: 800;
+  font-size: 35px;
+  margin-bottom: 3vh;
+}
+.shop .products p {
+  margin-bottom: 3vh;
+}
+.shop .products .clothes {
+  width: 100vw;
+  display: flex;
+  background-color: white;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.shop .products .clothes div {
+  border: 1px solid rgb(230, 227, 227);
+  border-radius: 20px;
+  width: 20vw;
+  position: relative;
+  padding-bottom: 2vh;
+  transition: box-shadow 1s ease-in-out;
+}
+.shop .products .clothes div img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 2vh;
+  width: 17vw;
+  height: 33vh;
+  border-radius: 15px;
+}
+.shop .products .clothes div .adidas {
+  text-align: left;
+  color: grey;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  font-size: small;
+  padding-left: 1.5vw;
+}
+.shop .products .clothes div .price {
+  display: block;
+  text-align: left;
+  padding-left: 1.5vw;
+  font-size: 16px;
+  color: rgb(99, 186, 125);
+  font-weight: 600;
+}
+.shop .products .clothes div .cart_me {
+  position: absolute;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: rgba(147, 153, 141, 0.4);
+  color: rgba(140, 199, 82, 0.9);
+  cursor: pointer;
+  bottom: 1.5vh;
+  right: 1.2vw;
+}
+.shop .products .clothes div .cart_me .MuiSvgIcon-root {
+  pointer-events: none;
+}
+.shop .products .clothes div .cart_me:hover {
+  background-color: rgb(49, 173, 49);
+  color: rgb(228, 217, 217);
+}
+.shop .products .clothes div p {
+  text-align: left;
+  margin-top: 1vh;
+  margin-left: 1.5vw;
+  margin-bottom: 1.2vh;
+  color: rgb(219, 134, 48);
+}
+.shop .products .clothes div h6 {
+  text-align: left;
+  padding-left: 1.5vw;
+  font-size: 15px;
+  font-weight: 700;
+}
+.shop .products .clothes div:hover {
+  box-shadow: 5px 5px 8px 2px #888888;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .shop .products .clothes {
+    flex-direction: column;
+  }
+  .shop .products .clothes div {
+    width: 85vw;
+    margin-left: 7.5vw;
+  }
+  .shop .products .clothes div img {
+    width: 77vw;
+    height: initial;
+  }
+  .shop .products .clothes div .cart_me {
+    padding: 12px;
+  }
+}/*# sourceMappingURL=shop.css.map */

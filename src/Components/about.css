@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0 0;
+  margin: 0 0;
+  box-sizing: border-box;
+  font-family: "spartan", sans-serif;
+}
+
+.about header {
+  background: url("./img/about/banner.png");
+  background-size: cover;
+  height: 40vh;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding-top: 11vh;
+}
+.about header h1 {
+  margin-bottom: 1.5vh;
+  letter-spacing: 2px;
+  font-size: 40px;
+}
+.about main {
+  padding: 4vh 8vw;
+  display: flex;
+  overflow-x: hidden;
+}
+.about main div {
+  padding: 10vh 3vw;
+}
+.about main div .major-text {
+  margin-top: 3vh;
+}
+.about main div .minor-text {
+  margin-top: 1.5vh;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+.about main div .animate {
+  margin-top: 3vh;
+  background-color: grey;
+  text-align: left;
+  position: relative;
+  height: 5vh;
+}
+.about main div .animate span {
+  display: block;
+  width: 50vw;
+  white-space: nowrap;
+  left: 20vw;
+  top: 5px;
+  color: white;
+  position: absolute;
+  -webkit-animation: move 30s linear infinite;
+          animation: move 30s linear infinite;
+}
+.about main img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 500px;
+  z-index: 1;
+}
+.about section {
+  text-align: center;
+}
+.about section h1 {
+  font-weight: 700;
+  margin-bottom: 2vh;
+  letter-spacing: 2px;
+  font-size: 40px;
+}
+.about section h1 strong {
+  color: purple;
+  text-decoration: underline;
+}
+.about section video {
+  width: 65vw;
+  margin-top: 4vh;
+  border-radius: 20px;
+}
+.about .list {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10vh 7vw;
+  gap: 15px;
+}
+.about .list li {
+  width: 180px;
+  padding: 3vh 0;
+  border: 1px solid rgb(224, 221, 221);
+  border-radius: 5px;
+  text-align: center;
+  list-style: none;
+  cursor: pointer;
+  margin-bottom: 1.2vh;
+}
+.about .list li img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 2vh;
+}
+.about .list li span {
+  font-weight: 600;
+  margin-top: 2vh;
+  border-radius: 5px;
+  padding: 5px 6px;
+}
+.about .list li:hover {
+  opacity: 0.85;
+}
+
+@-webkit-keyframes move {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes move {
+  to {
+    transform: translateX(-100%);
+  }
+}
+@media screen and (max-width: 500px) {
+  .about .list {
+    justify-content: flex-start;
+  }
+  .about .list li {
+    width: 150px;
+    margin-left: 4vw;
+  }
+  .about main {
+    flex-direction: column;
+  }
+  .about main img {
+    width: 84vw;
+    height: 300px;
+    -o-object-fit: initial;
+       object-fit: initial;
+  }
+  .about main div {
+    padding: 8vh 1vw;
+  }
+  .about section video {
+    width: 85vw;
+  }
+}/*# sourceMappingURL=about.css.map */
