@@ -31,11 +31,17 @@ const HomeSlice= createSlice({
            }
         },
         adjustQuantity(state,action){
-            console.log(action.payload)
+            // console.log(action.payload)
+            // state.data.map((value,index)=>{
+            //     console.log(action.payload.object.value)
+            //     if(action.payload.index === index){
+            //         console.log('finally')
+            //     }
+            // })
             return{
              ...state,
              data: state.data.map(
-                 (content, i) => i === action.payload.index ? {...content, quantity:action.payload.value}
+                 (content, i) => i === action.payload.object.index ? {...content, quantity:action.payload.object.value}
                                          : content
              )
             }
@@ -45,6 +51,12 @@ const HomeSlice= createSlice({
             return{
                 ...state,
                 Total_value:state.Total_value + action.payload
+            }
+         },
+         resetTotal(state){
+            return{
+                ...state,
+                Total_value:0
             }
          },
         changeNav(state,action){

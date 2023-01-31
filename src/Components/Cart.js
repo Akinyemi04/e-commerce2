@@ -13,16 +13,18 @@ const Cart = () => {
   })
   const dispatch = useDispatch()
   useEffect(()=>{
+    dispatch(home_action.resetTotal())
     data.map((val)=>{
       dispatch(home_action.changeTotal((val.quantity * val.price)))
     })
    
   },[data])
+  
   function changing(e){
+    console.log('loading..')
     const attribute= e.target.getAttribute('number')
-    console.log(e.target.value)
     const object = {
-      index:attribute,
+      index:parseInt(attribute),
       value: parseInt(e.target.value)
     }
     dispatch(home_action.adjustQuantity({object}))
@@ -33,6 +35,7 @@ const Cart = () => {
     data.map((val,index)=>{
       if(val.image === attribute){
         dispatch(home_action.remove(index))
+        dispatch(home_action.resetTotal())
       }
     })
 
@@ -61,8 +64,7 @@ const Cart = () => {
                 <img src={val.image} alt="" />
                 <span className='tag'>{val.product}</span>
                 <span className='price'>${val.price}</span>
-                <input className='quantity' number={index} onChange={changing} value={val.quantity} ></input>
-                {/* <span className='quantity' number={index} onChange={changing}  >{val.quantity}</span> */}
+                <input type='number' className='quantity' number={index} onChange={changing} placeholder={val.quantity} ></input>
                 <span>${val.price* val.quantity}</span>
               </section>
             )
