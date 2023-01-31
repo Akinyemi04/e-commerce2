@@ -62,6 +62,7 @@ const Cart = () => {
                 <span className='tag'>{val.product}</span>
                 <span className='price'>${val.price}</span>
                 <input className='quantity' number={index} onChange={changing} value={val.quantity} ></input>
+                {/* <span className='quantity' number={index} onChange={changing}  >{val.quantity}</span> */}
                 <span>${val.price* val.quantity}</span>
               </section>
             )
