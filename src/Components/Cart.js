@@ -64,7 +64,7 @@ const Cart = () => {
                 <img src={val.image} alt="" />
                 <span className='tag'>{val.product}</span>
                 <span className='price'>${val.price}</span>
-                <input type='number' className='quantity' number={index} onChange={changing} placeholder={val.quantity} ></input>
+                <input min='1' type='number' className='quantity' number={index} onChange={changing} placeholder={val.quantity} ></input>
                 <span>${val.price* val.quantity}</span>
               </section>
             )
