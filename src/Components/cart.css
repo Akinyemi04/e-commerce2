@@ -58,6 +58,7 @@
   text-align: center;
   position: relative;
   right: 3.5vw;
+  font-size: 16px;
   outline: none;
   height: 30px;
 }
@@ -156,6 +157,7 @@
   .cart .coupon .one input {
     width: 49vw;
     height: 5vh;
+    font-size: 16px;
   }
   .cart .coupon .two table {
     width: 85vw;
