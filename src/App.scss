@@ -8,6 +8,11 @@
 body{
   overflow-x: hidden;
 }
+@keyframes fade {
+  to{
+    opacity: 1;
+  }
+}
 header{
   position: sticky;
   top: 0;
@@ -16,6 +21,8 @@ header{
   box-shadow: 0 5px 15px rgba(0,0,0,0.06);
   padding: 2vh;
   width: 100vw;
+  opacity: 0;
+  animation: fade 0.5s forwards ;
   img{
     margin-left: 4vw;
   }
@@ -127,6 +134,8 @@ header{
 }
 .home{
   width: 100vw;
+  opacity: 0;
+  animation: fade 0.5s forwards ;
   section{
     display: flex;
     background-color: #E3E6F3;
@@ -173,8 +182,16 @@ header{
      object-fit: cover;
       height: 83vh;
       position: relative;
-      right: 30vw;
+      right: 0;
       width: 80vw;
+      opacity: 0;
+      animation: fade-in 0.5s ease 0.6s forwards;
+    }
+  }
+  @keyframes fade-in {
+    to{
+      opacity: 1;
+      right: 30vw;
     }
   }
   .list{
@@ -234,14 +251,16 @@ header{
         border: 1px solid rgb(230, 227, 227);
         border-radius: 20px;
         width: 20vw;
+        min-width: 220px;
         position: relative;
         padding-bottom: 2vh;
-        transition: box-shadow 1s ease-in-out;
+        transition: box-shadow 0.3s ease-in-out;
         img{
           object-fit: cover;
           margin-top: 2vh;
           width: 17vw;
           height: 33vh;
+          min-width: 190px;
           border-radius: 15px;
         }
         .adidas{
@@ -250,7 +269,6 @@ header{
           margin-top: 1vh;
           margin-bottom: 1vh;
           font-size: small;
-          padding-left: 1.5vw;
         }
         .price{
           display: block;
@@ -263,14 +281,17 @@ header{
         .cart_me{
           position: absolute;
           border-radius: 50%;
-          padding: 6px;
+          width: 40px;
+          height: 40px;
           background-color: rgba(147, 153, 141,0.4);
           color:rgba(140, 199, 82,0.9) ;
           cursor: pointer;
           bottom: 1.5vh;
+          padding-top: 8px;
           right: 1.2vw;
           .MuiSvgIcon-root{
             pointer-events: none;
+            text-align: center;
           }
           
         }
@@ -431,6 +452,7 @@ header{
     background-size: contain;
     display: flex;
     color: white;
+    width: 100vw;
     position: relative;
     padding: 4vh 6.2vw;
     div{
@@ -570,7 +592,7 @@ header{
   }
 }
  
-@media screen and(max-width:'500px') {
+@media screen and (max-width:'500px') {
   body{
     width: 100vw;
   }
@@ -628,9 +650,6 @@ header{
             width: 77vw;
             height: initial;
           }
-          .cart_me{
-            padding: 12px;
-          }
         }
       }
     }
@@ -647,6 +666,12 @@ header{
         right: 70vw;
         width: 120vw;
 
+      }
+      @keyframes fade-in {
+        to{
+          opacity: 1;
+          right: 70vw;
+        }
       }
       aside{
         h1{

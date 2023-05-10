@@ -104,7 +104,7 @@ const Home = () => {
           <section className='clothes'>
             <div>
               <img src={d1} alt="" />
-              <span className='cart_me'   onClick={click} ><ShoppingCartOutlinedIcon/></span>
+              <span className='cart_me'   onClick={click}><ShoppingCartOutlinedIcon/></span>
               <p className='adidas'>addidas</p>
               <h6>Cartoon Astronaut T-shirt</h6>
               <p>
