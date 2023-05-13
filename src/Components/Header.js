@@ -51,7 +51,7 @@ const Header = () => {
   function click(e){
     const data = e.target
     document.getElementsByClassName('twice')[0].removeAttribute('id')
-    body.style.overflow = 'hidden'
+    body.style.overflow = 'scroll'
     
     data.setAttribute('id','header')
     let next = data.nextElementSibling
