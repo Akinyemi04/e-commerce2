@@ -26,10 +26,18 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import StarOutlinedIcon from '@mui/icons-material/StarOutlined';
 import { useDispatch, useSelector } from 'react-redux'
 import { home_action } from './store'
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react'
+
 const Home = () => {
   const data = useSelector((val)=>{
     return val.Home.data
   })
+
+  useEffect(()=>{
+    Aos.init({})
+  },[])
   const dispatch = useDispatch()
 
   function click(e){
@@ -102,7 +110,7 @@ const Home = () => {
           <h3>Featured Products</h3>
           <p>Summer Collection New Mordem Design</p>
           <section className='clothes'>
-            <div>
+            <div data-aos='zoom-in'>
               <img src={d1} alt="" />
               <span className='cart_me'   onClick={click}><ShoppingCartOutlinedIcon/></span>
               <p className='adidas'>addidas</p>
@@ -116,7 +124,7 @@ const Home = () => {
               </p>
               <span className='price'>$78</span>
             </div>
-            <div>
+            <div data-aos='zoom-in'>
             <img src={d2} alt="" />
             <span className='cart_me' onClick={click} ><ShoppingCartOutlinedIcon/></span>
             <p className='adidas'>addidas</p>

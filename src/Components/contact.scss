@@ -14,11 +14,19 @@
         position: relative;
         z-index: 1;
         color: white;
-        padding-top: 11vh;
+        padding-top: 13.5vh;
+        opacity: 0;
+        animation: fade 0.6s ease  forwards;
         h1{
             margin-bottom: 1.5vh;
             letter-spacing: 2px;
             font-size: 40px;
+            opacity:0;
+            animation: fade 0.6s ease 0.4s  forwards;
+        }
+        p{
+            opacity: 0;
+            animation: fade 0.6s ease 0.6s  forwards;
         }
     }
     main{
@@ -101,12 +109,17 @@
                 margin-bottom: 1.7vh;
                 border: 1px solid rgb(177, 172, 172);
                 padding: 8px 9px;
+                outline: none;
+                resize:none ;
+                border-radius: 5px;
             }
             textarea{
                 margin-top: 3vh;
                 padding: 2vh 1.2vw;
                 border: 1px solid rgb(177, 172, 172);
                 outline: none;
+                resize: none;
+                border-radius: 5px;
             }
             .button{
                 margin-top: 2vh;
@@ -136,6 +149,7 @@
             div{
                 display: flex;
                 margin-bottom: 2vh;
+                flex-wrap:wrap;
                 img{
                     object-fit: contain;
                     transform: scale(0.7) translateY(-30px);
@@ -155,7 +169,7 @@
         }
     }
 }
-@media screen and(max-width:'500px') {
+@media screen and (max-width:'500px') {
     .contact{
         main{
             flex-direction: column;

@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import './blog.css'
 import b1 from './img/blog/b1.jpg'
 import b2 from './img/blog/b2.jpg'
@@ -5,7 +6,13 @@ import b3 from './img/blog/b3.jpg'
 import b4 from './img/blog/b4.jpg'
 import b6 from './img/blog/b6.jpg'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const Blog = () => {
+  useEffect(()=>{
+    Aos.init()
+  },[])
   return (
     <div className='blog'>
         <header>
@@ -13,7 +20,7 @@ const Blog = () => {
           <p>Read all case studies about our products!</p>
         </header>
         <main>
-          <div>
+          <div data-aos='zoom-in'>
             <img src={b1} alt="" />
             <span>13/01</span>
             <section>
@@ -22,7 +29,7 @@ const Blog = () => {
               <div  className='pin'>CONTINUE READING <hr /></div>
             </section>
           </div>
-          <div>
+          <div  data-aos='zoom-in'>
           <img src={b2} alt="" />
             <span>13/04</span>
             <section>
@@ -31,7 +38,7 @@ const Blog = () => {
               <div  className='pin'>CONTINUE READING <hr /></div>
             </section>
           </div>
-          <div>
+          <div  data-aos='zoom-in'>
           <img src={b3} alt="" />
             <span>12/01</span>
             <section>
@@ -40,7 +47,7 @@ const Blog = () => {
               <div className='pin'>CONTINUE READING <hr /></div>
             </section>
           </div>
-          <div>
+          <div  data-aos='zoom-in'>
           <img src={b4} alt="" />
             <span>16/01</span>
             <section>
@@ -49,7 +56,7 @@ const Blog = () => {
               <div  className='pin'>CONTINUE READING <hr /></div>
             </section>
           </div>
-          <div>
+          <div  data-aos='zoom-in'>
           <img src={b6} alt="" />
             <span>10/02</span>
             <section>

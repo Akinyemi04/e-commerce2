@@ -42,10 +42,17 @@
         z-index: 1;
         color: white;
         padding-top: 8vh;
+        animation: fade 0.6s ease  forwards;
         h1{
             margin-bottom: 1.5vh;
             letter-spacing: 2px;
             font-size: 40px;
+            opacity: 0;
+            animation: fade 0.6s 0.6s ease  forwards;
+        }
+        p{
+            opacity: 0;
+            animation: fade 0.6s 0.8s ease  forwards;
         }
     }
     main{
@@ -112,7 +119,7 @@
         }
     }
 }
-@media screen and(max-width:'500px') {
+@media screen and (max-width:'500px') {
     .blog{
         main{
             margin-top: 4vh;

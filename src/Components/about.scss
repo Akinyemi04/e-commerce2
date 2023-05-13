@@ -15,10 +15,18 @@
         z-index: 1;
         color: white;
         padding-top: 11vh;
+        opacity: 0;
+        animation: fade 0.6s ease  forwards;
         h1{
             margin-bottom: 1.5vh;
             letter-spacing: 2px;
             font-size: 40px;
+            opacity: 0;
+            animation: fade 0.6s ease 0.4s  forwards;
+        }
+        p{
+            opacity: 0;
+            animation: fade 0.6s ease 0.8s  forwards;
         }
     }
     main{
@@ -41,6 +49,7 @@
                 text-align: left;
                 position: relative;
                 height: 5vh;
+                border-radius: 10px;
                 span{ 
                     display: block;
                     width:50vw;
@@ -49,7 +58,7 @@
                     top: 5px;
                     color: white;
                     position: absolute;
-                   animation: move 30s linear infinite ;
+                   animation: move 10s linear infinite ;
                 }
             }
         }
@@ -115,7 +124,7 @@
         transform: translateX(-100%)
     }
 }
-@media screen and(max-width:'500px') {
+@media screen and (max-width:'500px') {
     .about{
         .list{
             justify-content: flex-start;

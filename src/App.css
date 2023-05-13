@@ -366,6 +366,10 @@ header .link #header::after {
 .home .banner div {
   text-align: left;
   padding-left: 2vw;
+  transition: opacity 0.4s;
+}
+.home .banner div:hover {
+  opacity: 0.6;
 }
 .home .banner .one, .home .banner .two {
   background: url("./Components//img//banner/b17.jpg");
@@ -487,11 +491,16 @@ header .link #header::after {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   border-top-left-radius: 0px;
+  min-width: 74px;
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
   border-bottom-left-radius: 0px;
   border: inherit;
+  transition: opacity 4s;
+}
+.footer section aside :hover {
+  opacity: 0.6;
 }
 .footer footer {
   display: flex;
@@ -693,6 +702,10 @@ header .link #header::after {
   }
   .footer section aside input {
     width: 65vw;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
   .footer section aside button {
     width: 15vw;

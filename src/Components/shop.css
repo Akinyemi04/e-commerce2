@@ -9,6 +9,11 @@
 .shop {
   width: 100vw;
 }
+.shop .pip {
+  margin: 20px 0;
+  opacity: 0;
+  animation: fade-in 0.6s 0.9s ease forwards;
+}
 .shop p {
   margin: 6vh 0;
   text-align: center;
@@ -25,7 +30,6 @@
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 .shop p span .arrow {
@@ -48,10 +52,13 @@
   position: relative;
   color: white;
   padding-top: 8vh;
+  animation: fade 0.6s ease forwards;
 }
 .shop header h1 {
+  margin-top: 50px;
   margin-bottom: 1.5vh;
-  font-size: 40px;
+  opacity: 0;
+  animation: fade 0.6s 0.6s forwards;
 }
 .shop .products {
   background-color: white;
@@ -80,9 +87,10 @@
   border: 1px solid rgb(230, 227, 227);
   border-radius: 20px;
   width: 20vw;
+  min-width: 220px;
   position: relative;
   padding-bottom: 2vh;
-  transition: box-shadow 1s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
 }
 .shop .products .clothes div img {
   -o-object-fit: cover;
@@ -90,6 +98,7 @@
   margin-top: 2vh;
   width: 17vw;
   height: 33vh;
+  min-width: 190px;
   border-radius: 15px;
 }
 .shop .products .clothes div .adidas {
@@ -98,7 +107,6 @@
   margin-top: 1vh;
   margin-bottom: 1vh;
   font-size: small;
-  padding-left: 1.5vw;
 }
 .shop .products .clothes div .price {
   display: block;
@@ -111,15 +119,18 @@
 .shop .products .clothes div .cart_me {
   position: absolute;
   border-radius: 50%;
-  padding: 6px;
+  width: 40px;
+  height: 40px;
   background-color: rgba(147, 153, 141, 0.4);
   color: rgba(140, 199, 82, 0.9);
   cursor: pointer;
   bottom: 1.5vh;
+  padding-top: 8px;
   right: 1.2vw;
 }
 .shop .products .clothes div .cart_me .MuiSvgIcon-root {
   pointer-events: none;
+  text-align: center;
 }
 .shop .products .clothes div .cart_me:hover {
   background-color: rgb(49, 173, 49);

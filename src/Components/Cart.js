@@ -1,6 +1,5 @@
 import'./cart.css'
 import  CancelOutlinedIcon  from '@mui/icons-material/CancelOutlined';
-import f1 from './img/products/f1.jpg'
 import { useDispatch, useSelector } from 'react-redux';
 import { home_action } from './store';
 import { useEffect } from 'react';
@@ -16,6 +15,7 @@ const Cart = () => {
     dispatch(home_action.resetTotal())
     data.map((val)=>{
       dispatch(home_action.changeTotal((val.quantity * val.price)))
+      return(<></>)
     })
    
   },[data])

@@ -20,11 +20,19 @@ import StarOutlinedIcon from '@mui/icons-material/StarOutlined';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import { useDispatch, useSelector } from 'react-redux'
 import { home_action } from './store'
+import { useEffect } from 'react'
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const Shop = () => {
+  const width = window.screen.width
   const dispatch = useDispatch()
   const data = useSelector((val)=>{
     return val.Home.data
   })
+  useEffect(()=>{
+    Aos.init({})
+  },[])
   function click(e){
     const prevelement = e.target.previousElementSibling
     const attribute =prevelement.getAttribute('src')
@@ -54,11 +62,11 @@ const Shop = () => {
     <div className='shop'>
       <header>
         <h1>#stayhome</h1>
-        <p>Save more with coupons on up to 70% off !</p>
+        <p className='pip'>Save more with coupons on up to 70% off !</p>
       </header>
       <section className='products'>
           <section className='clothes'>
-            <div>
+            <div data-aos='fade-down' data-aos-delay={width > 500 ? '1200':'100'}>
               <img src={d1} alt="" />
               <span className='cart_me' onClick={click}><ShoppingCartOutlinedIcon/></span>
               <p className='adidas'>addidas</p>
@@ -72,7 +80,7 @@ const Shop = () => {
               </p>
               <span className='price'>$78</span>
             </div>
-            <div>
+            <div data-aos='zoom-in' data-aos-delay={width > 500 ? '1300':'0'}>
             <img src={d2} alt="" />
             <span className='cart_me' onClick={click}><ShoppingCartOutlinedIcon/></span>
             <p className='adidas'>addidas</p>
@@ -86,7 +94,7 @@ const Shop = () => {
               </p>
               <span className='price'>$78</span>
             </div>
-            <div>
+            <div  data-aos='zoom-in' data-aos-delay={width > 500 ? '1400':'0'}>
             <img src={d3} alt="" />
             <span className='cart_me' onClick={click}><ShoppingCartOutlinedIcon/></span>
             <p className='adidas'>addidas</p>
@@ -100,7 +108,7 @@ const Shop = () => {
               </p>
               <span className='price'>$78</span>
             </div>
-            <div>
+            <div  data-aos='zoom-in' data-aos-delay={width > 500 ? '1500':'0'}>
             <img src={d4} alt="" />
             <span className='cart_me' onClick={click}><ShoppingCartOutlinedIcon/></span>
             <p className='adidas'>addidas</p>
