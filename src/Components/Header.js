@@ -13,6 +13,7 @@ const Header = () => {
     return val.Home.header_nav
   })
   const width = window.screen.availWidth
+  const body = document.getElementsByTagName('body')[0]
 
   const right = useSelector((val)=>{
     if (width > 500){
@@ -50,6 +51,7 @@ const Header = () => {
   function click(e){
     const data = e.target
     document.getElementsByClassName('twice')[0].removeAttribute('id')
+    body.style.overflow = 'hidden'
     
     data.setAttribute('id','header')
     let next = data.nextElementSibling
@@ -79,14 +81,16 @@ const Header = () => {
     })
     
   }
+  function clearicon(){
+    dispatch(home_action.changeNav('none'))
+    dispatch(home_action.changeRight('-70vw'))
+    body.style.overflow = 'scroll'
+  }
   return (
     <header>
         <img src={logo} alt="" />
         <nav style={{display:displayy,right:right}}>
-          <ClearOutlinedIcon onClick={()=>{
-            dispatch(home_action.changeNav('none'))
-            dispatch(home_action.changeRight('-70vw'))
-          }} className='nav_hide'/>
+          <ClearOutlinedIcon onClick={clearicon} className='nav_hide'/>
             <NavLink className='air home'  onClick={click} to='/'>Home</NavLink>
             <NavLink className='air shop' onClick={click} to='/shop'>Shop</NavLink>
             <NavLink className='air blog' onClick={click} to='/blog'>Blog</NavLink>
@@ -97,6 +101,7 @@ const Header = () => {
         <FormatIndentDecreaseOutlinedIcon onClick={()=>{
           dispatch(home_action.changeNav('flex'))
           dispatch(home_action.changeRight('0vw'))
+          body.style.overflow = 'hidden'
         }} className='hide'/>
     </header>
   )
