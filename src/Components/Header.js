@@ -12,6 +12,16 @@ const Header = () => {
   const displayy= useSelector((val)=>{
     return val.Home.header_nav
   })
+  const width = window.screen.availWidth
+
+  const right = useSelector((val)=>{
+    if (width > 500){
+      return val.Home.right
+    }
+    else{
+      return 0 
+    }
+  })
   useEffect(()=>{
     if(url.includes('/shop')){
       document.getElementsByClassName('shop')[0].setAttribute('id','header')
@@ -72,9 +82,10 @@ const Header = () => {
   return (
     <header>
         <img src={logo} alt="" />
-        <nav style={{display:displayy}}>
+        <nav style={{display:displayy,right:right}}>
           <ClearOutlinedIcon onClick={()=>{
             dispatch(home_action.changeNav('none'))
+            dispatch(home_action.changeRight('-70vw'))
           }} className='nav_hide'/>
             <NavLink className='air home'  onClick={click} to='/'>Home</NavLink>
             <NavLink className='air shop' onClick={click} to='/shop'>Shop</NavLink>
@@ -85,6 +96,7 @@ const Header = () => {
         <NavLink  to='/cart' className='link'><span className='twice' onClick={click2}><ShoppingBagOutlinedIcon className='icon'/></span></NavLink>
         <FormatIndentDecreaseOutlinedIcon onClick={()=>{
           dispatch(home_action.changeNav('flex'))
+          dispatch(home_action.changeRight('0vw'))
         }} className='hide'/>
     </header>
   )

@@ -5,7 +5,8 @@ const HomeSlice= createSlice({
     initialState:{
         header_nav:'inliine_block',
         data:[],
-        Total_value: 0
+        Total_value: 0,
+        right:'-70vw'
     },
     reducers:{
         add(state,action){
@@ -31,13 +32,6 @@ const HomeSlice= createSlice({
            }
         },
         adjustQuantity(state,action){
-            // console.log(action.payload)
-            // state.data.map((value,index)=>{
-            //     console.log(action.payload.object.value)
-            //     if(action.payload.index === index){
-            //         console.log('finally')
-            //     }
-            // })
             return{
              ...state,
              data: state.data.map(
@@ -71,6 +65,12 @@ const HomeSlice= createSlice({
                     ...state,
                     header_nav:'flex'
                 }
+            }
+        },
+        changeRight(state,action){
+            return{
+                ...state,
+                right:action.payload
             }
         }
     }
