@@ -7,9 +7,12 @@ import f5 from './img/features/f5.png'
 import f6 from './img/features/f6.png'
 import video from './img/about/vid.mp4'
 import happy from './img/about/a6.jpg'
+import ScrollToTop from './ScrollToTop'
+
 const About = () => {
   return (
     <div className="about">
+      <ScrollToTop/>
       <header>
         <h1>#KnowUs</h1>
         <p>Lorem ipsum dolor sit amet,consectetur</p>

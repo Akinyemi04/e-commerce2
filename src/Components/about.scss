@@ -142,6 +142,11 @@
             }
             div{
                 padding: 8vh 1vw;
+                .animate{
+                    span{
+                        animation-duration: 5s;
+                    }
+                }
             }
         }
         section{

@@ -23,6 +23,7 @@ import { home_action } from './store'
 import { useEffect } from 'react'
 import Aos from "aos";
 import "aos/dist/aos.css";
+import ScrollToTop from './ScrollToTop'
 
 const Shop = () => {
   const width = window.screen.width
@@ -60,6 +61,7 @@ const Shop = () => {
   }
   return (
     <div className='shop'>
+      <ScrollToTop/>
       <header>
         <h1>#stayhome</h1>
         <p className='pip'>Save more with coupons on up to 70% off !</p>

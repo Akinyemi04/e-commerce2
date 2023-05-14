@@ -6,9 +6,12 @@ import ImportContactsOutlinedIcon from '@mui/icons-material/ImportContactsOutlin
 import p1 from './img/people/1.png'
 import p2 from './img/people/2.png'
 import p3 from './img/people/3.png'
+import ScrollToTop from './ScrollToTop';
+
 const Contact = () => {
   return (
     <div className="contact">
+      <ScrollToTop/>
         <header>
         <h1>#let's_talk</h1>
         <p>LEAVE A MESSAGE,We love to hear from you!</p>

@@ -146,6 +146,9 @@
   .about main div {
     padding: 8vh 1vw;
   }
+  .about main div .animate span {
+    animation-duration: 5s;
+  }
   .about section video {
     width: 85vw;
   }

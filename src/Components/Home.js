@@ -29,6 +29,8 @@ import { home_action } from './store'
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react'
+import ScrollToTop from './ScrollToTop'
+
 
 const Home = () => {
   const data = useSelector((val)=>{
@@ -67,6 +69,7 @@ const Home = () => {
   }
   return (
     <div className='home'>
+      <ScrollToTop/>
         <section>
             <aside>
                 <h1>Trade-in-offer</h1>

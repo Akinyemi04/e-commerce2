@@ -8,6 +8,7 @@ import b6 from './img/blog/b6.jpg'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import Aos from "aos";
 import "aos/dist/aos.css";
+import ScrollToTop from './ScrollToTop'
 
 const Blog = () => {
   useEffect(()=>{
@@ -15,6 +16,7 @@ const Blog = () => {
   },[])
   return (
     <div className='blog'>
+      <ScrollToTop/>
         <header>
           <h1>#readmore</h1>
           <p>Read all case studies about our products!</p>

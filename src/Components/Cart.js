@@ -3,6 +3,8 @@ import  CancelOutlinedIcon  from '@mui/icons-material/CancelOutlined';
 import { useDispatch, useSelector } from 'react-redux';
 import { home_action } from './store';
 import { useEffect } from 'react';
+import ScrollToTop from './ScrollToTop';
+
 const Cart = () => {
   const data = useSelector((val)=>{
     return val.Home.data
@@ -42,6 +44,7 @@ const Cart = () => {
   }
   return (
     <div className='cart'>
+      <ScrollToTop/>
       <header>
         <h1>#cart</h1>
         <p>Add your coupon code and Save up to 70%!</p>
