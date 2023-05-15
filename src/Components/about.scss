@@ -52,13 +52,13 @@
                 border-radius: 10px;
                 span{ 
                     display: block;
-                    width:50vw;
+                    width:110vw;
                     white-space: nowrap;
                     left: 20vw;
                     top: 5px;
                     color: white;
                     position: absolute;
-                   animation: move 10s linear infinite ;
+                   animation: move 12s linear infinite ;
                 }
             }
         }
@@ -144,7 +144,8 @@
                 padding: 8vh 1vw;
                 .animate{
                     span{
-                        animation-duration: 5s;
+                        animation-duration: 13s;
+                        width: 163vw;
                     }
                 }
             }

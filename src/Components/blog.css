@@ -93,10 +93,11 @@
 .blog main div section h2 {
   margin-bottom: 2vh;
   font-weight: 600;
+  font-size: large;
 }
 .blog main div section .kickstarter {
   color: grey;
-  font-size: 18px;
+  font-size: 15px;
   width: 33vw;
   margin-bottom: 1.5vh;
 }

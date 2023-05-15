@@ -81,8 +81,8 @@
 }
 .cart .coupon .one input {
   margin-top: 2vh;
-  padding: 4px 5px;
-  font-size: 16px;
+  padding: 7px 5px;
+  font-size: smaller;
   font-weight: 500;
   width: 23vw;
   outline: none;
@@ -96,7 +96,7 @@
   color: white;
   cursor: pointer;
   font-weight: 600;
-  font-size: medium;
+  font-size: smaller;
   padding: 10px 13px;
 }
 .cart .coupon .one .button:hover {
@@ -113,6 +113,7 @@
   border-collapse: collapse;
   width: 32vw;
   text-align: left;
+  font-size: smaller;
 }
 .cart .coupon .two table th, .cart .coupon .two table td {
   border: 1px solid grey;
@@ -128,7 +129,7 @@
   border-radius: 5px;
   color: white;
   font-weight: 600;
-  font-size: medium;
+  font-size: small;
 }
 .cart .coupon .two .check_out:hover {
   opacity: 0.65;

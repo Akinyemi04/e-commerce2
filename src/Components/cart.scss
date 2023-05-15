@@ -82,8 +82,8 @@
         .one{
             input{
                 margin-top: 2vh;
-                padding: 4px 5px;
-                font-size: 16px;
+                padding: 7px 5px;
+                font-size: smaller;
                 font-weight: 500;
                 width: 23vw;
                 outline: none;
@@ -97,7 +97,7 @@
                 color: white;
                 cursor: pointer;
                 font-weight: 600;
-                font-size: medium;
+                font-size: smaller;
                 padding: 10px 13px;
                 
             }
@@ -115,6 +115,7 @@
                 border-collapse: collapse;
                 width: 32vw;
                 text-align: left;
+                font-size: smaller;
                 th,td{
                     border: 1px solid grey;
                     padding: 5px;
@@ -130,7 +131,7 @@
                 border-radius: 5px;
                 color: white;
                 font-weight: 600;
-                font-size: medium;
+                font-size: small;
             }
             .check_out:hover{
                 opacity: 0.65;
