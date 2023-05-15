@@ -13,7 +13,7 @@ import ScrollToTop from './ScrollToTop'
 const Blog = () => {
   useEffect(()=>{
     Aos.init({
-      offset:(window.screen.availHeight * .01),
+      
     })
   },[])
   return (
