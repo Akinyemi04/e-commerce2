@@ -49,8 +49,14 @@
   justify-content: space-between;
   font-size: 15px;
 }
+.cart main section .click_icon {
+  cursor: pointer;
+}
 .cart main section .click_icon .MuiSvgIcon-root {
   pointer-events: none;
+}
+.cart main section .click_icon:hover {
+  opacity: 0.6;
 }
 .cart main section img {
   -o-object-fit: contain;
